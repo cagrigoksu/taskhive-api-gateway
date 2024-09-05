@@ -1,0 +1,6 @@
+@TaskHive_API_Gateway_HostAddress = http://localhost:5017
+
+GET {{TaskHive_API_Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
