@@ -16,6 +16,20 @@
           "Port": 7007          
         }
       ],
+      "UpstreamPathTemplate": "/gateway/Project/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Project/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          //"Host": "taskhive-projectservice.azurewebsites.net",
+          //"Port": 443
+          "Host": "localhost",
+          "Port": 7073          
+        }
+      ],
       "UpstreamPathTemplate": "/gateway/User/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     }
