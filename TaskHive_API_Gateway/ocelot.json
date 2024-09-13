@@ -16,7 +16,7 @@
           "Port": 7007          
         }
       ],
-      "UpstreamPathTemplate": "/gateway/Project/{everything}",
+      "UpstreamPathTemplate": "/gateway/User/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
     {
@@ -30,7 +30,7 @@
           "Port": 7073          
         }
       ],
-      "UpstreamPathTemplate": "/gateway/User/{everything}",
+      "UpstreamPathTemplate": "/gateway/Project/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     }
   ]
