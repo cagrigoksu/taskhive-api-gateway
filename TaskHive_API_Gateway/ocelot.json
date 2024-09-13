@@ -13,7 +13,7 @@
           "Port": 443         
         }
       ],
-      "UpstreamPathTemplate": "/gateway/Project/{everything}",
+      "UpstreamPathTemplate": "/gateway/User/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
     {
@@ -25,7 +25,7 @@
           "Port": 443       
         }
       ],
-      "UpstreamPathTemplate": "/gateway/User/{everything}",
+      "UpstreamPathTemplate": "/gateway/Project/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     }
   ]
