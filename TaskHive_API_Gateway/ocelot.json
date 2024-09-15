@@ -1,19 +1,16 @@
 {
   "GlobalConfiguration": {
-    //"BaseUrl": "taskhive-api-gateway.azurewebsites.net",
-    "BaseUrl": "localhost:7062",
+    "BaseUrl": "http://localhost:7063",
     "RequestIdKey": "OcRequestId"
   },
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/User/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          //"Host": "taskhive-userservice.azurewebsites.net",
-          //"Port": 443
           "Host": "localhost",
-          "Port": 7007          
+          "Port": 7008          
         }
       ],
       "UpstreamPathTemplate": "/gateway/User/{everything}",
@@ -21,13 +18,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/Project/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          //"Host": "taskhive-projectservice.azurewebsites.net",
-          //"Port": 443
           "Host": "localhost",
-          "Port": 7073          
+          "Port": 7074          
         }
       ],
       "UpstreamPathTemplate": "/gateway/Project/{everything}",
