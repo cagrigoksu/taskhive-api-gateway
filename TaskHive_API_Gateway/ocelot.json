@@ -1,8 +1,9 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:7063",
+    "BaseUrl": "https://localhost:7062",
     "RequestIdKey": "OcRequestId"
   },
+
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/User/{everything}",
@@ -16,6 +17,7 @@
       "UpstreamPathTemplate": "/gateway/User/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
+
     {
       "DownstreamPathTemplate": "/api/Project/{everything}",
       "DownstreamScheme": "http",
@@ -27,6 +29,33 @@
       ],
       "UpstreamPathTemplate": "/gateway/Project/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Department/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7070          
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Department/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Role/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7070          
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Role/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     }
+
   ]
 }
