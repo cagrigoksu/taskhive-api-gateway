@@ -16,6 +16,7 @@
       "UpstreamPathTemplate": "/gateway/User/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
+
     {
       "DownstreamPathTemplate": "/api/Project/{everything}",
       "DownstreamScheme": "http",
@@ -26,6 +27,32 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/Project/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Department/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "helper-service",
+          "Port": 8080          
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Department/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    
+    {
+      "DownstreamPathTemplate": "/api/Role/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "helper-service",
+          "Port": 8080          
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Role/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     }
   ]
