@@ -16,6 +16,7 @@
       "UpstreamPathTemplate": "/gateway/User/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
+
     {
       "DownstreamPathTemplate": "/api/Project/{everything}",
       "DownstreamScheme": "https",
@@ -26,6 +27,32 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/Project/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Department/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "taskhive-helperservice.azurewebsites.net",
+          "Port": 443      
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Department/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Role/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "taskhive-helperservice.azurewebsites.net",
+          "Port": 443         
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Role/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     }
   ]
